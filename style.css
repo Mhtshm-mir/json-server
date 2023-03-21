@@ -165,3 +165,12 @@
   text-decoration: none;
   color: white;
 }
+
+/* ! homepage styling */
+
+.recipe-container {
+  width: 100%;
+}
+.recipe-images {
+  width: 30%;
+}
