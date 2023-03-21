@@ -63,13 +63,13 @@ const loginData = (e) => {
   fetch(`https://json-server-6ewh.onrender.com/users?email=${logEmail.value}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data[0]);
       if (Object.keys(data).length === 0) {
         alert("Please Enter valid email");
       } else {
-        if (data[0].password === +logPass.value) {
+        console.log(data[0].password, +logPass.value);
+        if (data[0].password === logPass.value) {
           alert("Log in Successfully");
-          window.location.href = "homepage.html";
+          window.location.href = "index.html";
         } else {
           alert("login failed");
         }
