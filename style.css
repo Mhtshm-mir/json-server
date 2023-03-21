@@ -151,3 +151,11 @@
   color: white;
   transition: all 0.3s ease-in-out;
 }
+
+.nav-ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.nav-ul li {
+}
