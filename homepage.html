@@ -16,7 +16,23 @@
         <li><a href="recipes.html">My Recipes</a></li>
       </ul>
     </nav>
-    <div class="recipe-container"></div>
+    <div>
+      <div>
+        <h1>Filter by Category</h1>
+        <select id="cat">
+          <option value="starter">Starter</option>
+          <option value="desert">Desert</option>
+          <option value="maincourse">Main Course</option>
+        </select>
+      </div>
+
+      <div class="recipe-container"></div>
+      <div class="buttondiv">
+        <button class="prevbtn">Previous</button>
+        <h1 class="pagenum"></h1>
+        <button class="nextbtn">Next</button>
+      </div>
+    </div>
   </body>
   <script src="homepage.js"></script>
 </html>

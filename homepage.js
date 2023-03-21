@@ -1,16 +1,22 @@
-const getData = () => {
-  fetch("https://json-server-6ewh.onrender.com/recipes")
+const nextbtn = document.querySelector(".nextbtn");
+const prevbtn = document.querySelector(".prevbtn");
+let pagenum = document.querySelector(".pagenum");
+let page = 1;
+pagenum.textContent = page;
+const getData = (page) => {
+  console.log(page);
+  fetch(`https://json-server-6ewh.onrender.com/recipes?_limit=5&_page=${page}`)
     .then((res) => res.json())
     .then((data) => {
       appendData(data);
     });
 };
-getData();
+getData(page);
 
 const appendData = (data) => {
-  console.log(data);
+  const container = document.querySelector(".recipe-container");
+  container.innerHTML = "";
   data.map((el) => {
-    const container = document.querySelector(".recipe-container");
     const div = document.createElement("div");
     div.setAttribute("class", "recipe-div");
     const image = document.createElement("img");
@@ -68,3 +74,16 @@ const viewRecipe = (
   localStorage.setItem("recipe", JSON.stringify(obj));
   window.location.href = "singlerecipe.html";
 };
+
+nextbtn.addEventListener("click", () => {
+  page++;
+  pagenum.textContent = page;
+  getData(page);
+});
+prevbtn.addEventListener("click", () => {
+  if (page > 0) {
+    page--;
+    pagenum.textContent = page;
+    getData(page);
+  }
+});
