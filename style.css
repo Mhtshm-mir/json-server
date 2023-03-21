@@ -186,3 +186,11 @@
   align-items: center;
   margin-top: 35px;
 }
+
+.single-recipe-images {
+  width: 40%;
+}
+.single-recipe {
+  width: 80%;
+  margin: auto;
+}

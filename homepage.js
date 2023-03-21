@@ -33,7 +33,7 @@ const appendData = (data) => {
     button.addEventListener("click", () => {
       viewRecipe(
         title.textContent,
-        image.textContent,
+        image.src,
         description.textContent,
         category.textContent,
         ingredients.textContent,
@@ -61,8 +61,10 @@ const viewRecipe = (
     description: description,
     category: category,
     ingredients: ingredients,
+    instructions: instructions,
     username: username,
   };
 
   localStorage.setItem("recipe", JSON.stringify(obj));
+  window.location.href = "singlerecipe.html";
 };
