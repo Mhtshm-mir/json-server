@@ -1,13 +1,23 @@
 const nextbtn = document.querySelector(".nextbtn");
 const prevbtn = document.querySelector(".prevbtn");
 let pagenum = document.querySelector(".pagenum");
+const cat = document.querySelector("#cat");
 let page = 1;
 pagenum.textContent = page;
 const getData = (page) => {
-  console.log(page);
   fetch(`https://json-server-6ewh.onrender.com/recipes?_limit=5&_page=${page}`)
     .then((res) => res.json())
     .then((data) => {
+      appendData(data);
+    });
+};
+const getDataByCategory = (page, category) => {
+  fetch(
+    `https://json-server-6ewh.onrender.com/recipes?_limit=5&_page=${page}&category=${category}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
       appendData(data);
     });
 };
@@ -86,4 +96,9 @@ prevbtn.addEventListener("click", () => {
     pagenum.textContent = page;
     getData(page);
   }
+});
+
+cat.addEventListener("click", () => {
+  console.log(cat.value);
+  getDataByCategory(page, cat.value);
 });
