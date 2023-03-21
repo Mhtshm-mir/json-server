@@ -12,6 +12,7 @@ const appendData = (data) => {
   data.map((el) => {
     const container = document.querySelector(".recipe-container");
     const div = document.createElement("div");
+    div.setAttribute("class", "recipe-div");
     const image = document.createElement("img");
     image.src = el.image;
     image.setAttribute("class", "recipe-images");
@@ -43,4 +44,25 @@ const appendData = (data) => {
     div.append(image, title, description, category, button);
     container.append(div);
   });
+};
+
+const viewRecipe = (
+  title,
+  image,
+  description,
+  category,
+  ingredients,
+  instructions,
+  username
+) => {
+  let obj = {
+    title: title,
+    image: image,
+    description: description,
+    category: category,
+    ingredients: ingredients,
+    username: username,
+  };
+
+  localStorage.setItem("recipe", JSON.stringify(obj));
 };
