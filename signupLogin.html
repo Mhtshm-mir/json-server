@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ! Main div of form -->
+      <div class="modalForm">
+        <!-- ! Button div -->
+        <div class="actionBtns">
+          <button class="actionBtn signupBtn">Signup</button>
+          <button class="actionBtn loginBtn">Login</button>
+          <button class="moveBtn">Signup</button>
+        </div>
+
+        <!-- ! userForm main div -->
+        <div class="userForm">
+          <!-- !Signup form -->
+          <form class="form signup signupform">
+            <!-- ! name  -->
+            <div class="inputGroup">
+              <input
+                id="signup-username"
+                type="text"
+                placeholder="First name "
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- !email  -->
+            <div class="inputGroup">
+              <input
+                type="email"
+                placeholder="email "
+                autocomplete="off"
+                id="signup-email"
+              />
+            </div>
+            <!-- !password -->
+            <div class="inputGroup">
+              <input
+                id="signup-password"
+                type="password"
+                placeholder="create new password "
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- ! submit button -->
+            <button type="submit" class="submitBtn">Submit</button>
+
+            <!--!  -->
+          </form>
+
+          <!-- !Login form -->
+          <form class="form login">
+            <!-- !email  -->
+            <div class="inputGroup">
+              <input
+                id="login-email"
+                type="email"
+                placeholder="email "
+                autocomplete="off"
+              />
+            </div>
+            <!-- !password -->
+            <div class="inputGroup">
+              <input
+                type="password"
+                placeholder=" password "
+                autocomplete="off"
+                id="login-password"
+              />
+            </div>
+
+            <!-- ! submit button -->
+            <button type="submit" class="submitBtn">Submit</button>
+
+            <!--!  -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="signup.js"></script>
+</html>

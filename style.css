@@ -1,0 +1,134 @@
+/* ! Changing default styles of browser */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ! Style rules for main divs  */
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(95, 95, 95, 0.39);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalForm {
+  width: 400px;
+  min-height: 80vh;
+  background-color: #fff;
+  border-radius: 10p;
+  box-shadow: 0px 2px 8px rgba(95, 95, 95, 0.15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ! styling for buttons */
+
+.actionBtns {
+  width: 80%;
+  background-color: royalblue;
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.actionBtn {
+  padding: 1rem;
+  width: 50%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.moveBtn {
+  position: absolute;
+  width: 50%;
+  height: 90%;
+  margin: 2px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.8;
+  font-weight: 600;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  transform: translateX(0);
+}
+
+.rightBtn {
+  transform: translateX(98%);
+  transition: all 0.2s ease-in-out;
+}
+
+/* ! styling for input tags and submit btn */
+
+.inputGroup {
+  width: 300px;
+  margin: 0.8rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+}
+.inputGroup input:focus {
+  outline: none;
+}
+
+.submitBtn {
+  width: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.submitBtn:hover {
+  background-color: royalblue;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* !style for signup and login form */
+
+.form {
+  display: none;
+}
+.signupform {
+  display: block;
+}
+
+.loginform {
+  display: block;
+}
